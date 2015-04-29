@@ -6,7 +6,7 @@ queries, inspecting arguments, and quickly peeking at the actual results without
 
 Usage
 =====
-```
+```go
 package main
 
 import (
