@@ -6,4 +6,21 @@ queries, inspecting arguments, and quickly peeking at the actual results without
 
 Usage
 =====
-`sql.Open("logging:mysql", "DSN")`
+```
+package main
+
+import (
+	"database/sql"
+	"fmt"
+	_ "github.com/teltechsystems/logging-sql-driver"
+)
+
+func main() {
+	conn, err := sql.Open("logging:mysql", "DSN")
+	fmt.Printf("conn: %s", conn)
+	fmt.Printf("err: %s", err)
+	defer conn.Close()
+
+	// ....
+}
+```
